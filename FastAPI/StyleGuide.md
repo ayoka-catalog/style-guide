@@ -29,7 +29,7 @@ Let's create a vega ( call it whatever you like ) shell function.
 vega() {
   if [[ "$1" == "init" && "$2" == "fastapi" ]]; then
     echo "Downloading scaffold script..."
-    curl -sSL https://github.com/ayoka-catalog/style-guide/blob/main/FastAPI/setup.sh | bash
+    curl -sSL https://raw.githubusercontent.com/ayoka-catalog/style-guide/refs/heads/main/FastAPI/setup.sh | bash
   else
     echo "Usage: vega init fastapi"
   fi
@@ -385,7 +385,7 @@ Validation in FastAPI is powered by **Pydantic**, which ensures your request and
 
 ### Best Practices
 
-| Do                                                        |  Avoid                                     |
+| Do                                                        | Avoid                                      |
 | --------------------------------------------------------- | ------------------------------------------ |
 | - Use Pydantic models for **every** request and response  | - Accepting raw `dict` s or untyped inputs |
 | - Use type constraints: `EmailStr`, `constr`, `conint`    | - Letting user input go unchecked          |
