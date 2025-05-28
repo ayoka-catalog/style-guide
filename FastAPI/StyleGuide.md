@@ -28,10 +28,10 @@ Let's create a vega ( call it whatever you like ) shell function.
 ```bash
 vega() {
   if [[ "$1" == "init" && "$2" == "fastapi" ]]; then
-    echo "📥 Downloading scaffold script..."
+    echo "Downloading scaffold script..."
     curl -sSL https://github.com/ayoka-catalog/style-guide/blob/main/FastAPI/setup.sh | bash
   else
-    echo "❌ Usage: vega init fastapi"
+    echo "Usage: vega init fastapi"
   fi
 }
 
@@ -325,7 +325,7 @@ def read_profile(current_user = Depends(get_current_user)):
 
 **Best Practices**
 
-| ✅ Do                                                                   | ❌ Avoid                                           |
+| Do                                                                      | Avoid                                              |
 | ----------------------------------------------------------------------- | -------------------------------------------------- |
 | Use dependencies to inject DB, auth, settings, etc.                     | Mixing DB and auth logic in routes directly        |
 | Isolate reusable logic in `dependencies.py`                             | Copy-pasting dependency logic across routers       |
@@ -359,7 +359,7 @@ raise HTTPException(status_code=404, detail="User not found")
 
 ### Best Practices
 
-| ✅ Do                                                           | ❌ Avoid                                           |
+| Do                                                              | Avoid                                              |
 | --------------------------------------------------------------- | -------------------------------------------------- |
 | - Use `HTTPException` for known client-side issues              | - Silently swallowing exceptions                   |
 | - Define custom exceptions for expected errors                  | - Using string messages everywhere                 |
@@ -385,7 +385,7 @@ Validation in FastAPI is powered by **Pydantic**, which ensures your request and
 
 ### Best Practices
 
-| ✅ Do                                                     | ❌ Avoid                                   |
+| Do                                                        |  Avoid                                     |
 | --------------------------------------------------------- | ------------------------------------------ |
 | - Use Pydantic models for **every** request and response  | - Accepting raw `dict` s or untyped inputs |
 | - Use type constraints: `EmailStr`, `constr`, `conint`    | - Letting user input go unchecked          |
@@ -450,7 +450,7 @@ class UserCreate(BaseModel):
 
 ### Best Practices
 
-| ✅ Do                                                     | ❌ Avoid                              |
+| Do                                                        | Avoid                                 |
 | --------------------------------------------------------- | ------------------------------------- |
 | - Use `summary`, `description`, and `tags` for all routes | - Leaving routes undocumented         |
 | - Provide example payloads in models                      | - Relying on users to guess structure |

@@ -9,7 +9,7 @@ read -p "Enter project name: " PROJECT_NAME
 mkdir -p $PROJECT_NAME
 cd $PROJECT_NAME || exit
 
-echo "📁 Setting up project structure..."
+echo "Setting up project structure..."
 
 # Base files
 touch .env
@@ -17,12 +17,12 @@ echo "# Python dependencies" > requirements.txt
 echo "# FastAPI Project Starter" > README.md
 
 # Virtual Environment
-echo "🐍 Creating virtual environment..."
+echo "Creating virtual environment..."
 python3 -m venv venv
 source venv/bin/activate
 
 # Install core dependencies
-echo "📦 Installing FastAPI and Uvicorn..."
+echo "Installing FastAPI and Uvicorn..."
 pip install --upgrade pip
 pip install fastapi uvicorn[standard]
 pip freeze > requirements.txt
@@ -86,5 +86,5 @@ touch api/tests/__init__.py
 echo "# Pytest shared fixtures (e.g., test client)" > api/tests/conftest.py
 
 # Success message
-echo "✅ FastAPI project setup complete!"
-echo "👉 To run the app: cd $PROJECT_NAME && source venv/bin/activate && uvicorn api.main:app --reload"
+echo "FastAPI project setup complete!"
+echo "To run the app: cd $PROJECT_NAME && source venv/bin/activate && uvicorn api.main:app --reload"
