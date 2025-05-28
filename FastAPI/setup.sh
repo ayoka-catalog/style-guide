@@ -3,12 +3,6 @@
 # Exit on error
 set -e
 
-read -p "Enter project name: " PROJECT_NAME
-
-# Create the root project folder
-mkdir -p $PROJECT_NAME
-cd $PROJECT_NAME || exit
-
 echo "Setting up project structure..."
 
 # Base files
@@ -87,4 +81,4 @@ echo "# Pytest shared fixtures (e.g., test client)" > api/tests/conftest.py
 
 # Success message
 echo "FastAPI project setup complete!"
-echo "To run the app: cd $PROJECT_NAME && source venv/bin/activate && uvicorn api.main:app --reload"
+echo "To run the app: source venv/bin/activate && uvicorn api.main:app --reload"
