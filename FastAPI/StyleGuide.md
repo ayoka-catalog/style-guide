@@ -21,26 +21,15 @@ This style guide provides standards and best practices for developing FastAPI ap
 
 ## Getting Started ( Optional )
 
-Let's create a vega ( call it whatever you like ) shell function.
-
-1. Edit your `~/.bashrc` or `~/.zshrc` and define vega like this:
+To get started, download the `setup.sh` shell script and delete it after installation by running this:
 
 ```bash
-vega() {
-  if [[ "$1" == "init" && "$2" == "fastapi" ]]; then
-    echo "Downloading scaffold script..."
-    curl -sSL https://raw.githubusercontent.com/ayoka-catalog/style-guide/refs/heads/main/FastAPI/setup.sh | bash
-  else
-    echo "Usage: vega init fastapi"
-  fi
-}
+curl -sSLO https://raw.githubusercontent.com/ayoka-catalog/style-guide/main/FastAPI/setup.sh && \
+chmod +x setup.sh && \
+./setup.sh my-app && \
+rm setup.sh
 
-```
 
-2.  Reload your shell
-
-```bash
-source ~/.bashrc   # or source ~/.zshrc
 ```
 
 ## Project Structure
