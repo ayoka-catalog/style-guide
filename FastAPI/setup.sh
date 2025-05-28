@@ -87,4 +87,6 @@ echo "# Pytest shared fixtures (e.g., test client)" > api/tests/conftest.py
 
 # Success message
 echo "FastAPI project setup complete!"
-echo "👉 To run the app: cd $PROJECT_NAME && source venv/bin/activate && uvicorn api.main:app --reload"
+
+echo "To run the app: cd $PROJECT_NAME && source venv/bin/activate && uvicorn api.main:app --reload"
+
