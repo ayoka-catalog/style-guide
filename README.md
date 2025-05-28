@@ -1,7 +1,7 @@
 # Ayoka Style Guide
 This is a collection of documentation for various languages and frameworks, including FastAPI, PHP, React, & More. Many of the principles are conventional, while others are our personal preferences, adapted from our experiences and frustrations.
 
-# Suggestions, Criticisms & Improvements
+## Suggestions, Criticisms & Improvements
 Our coding style is open to suggestions, improvements, and constructive criticism. We want to make the world a better place. Help us do that better.
 
 ## How to Contribute
