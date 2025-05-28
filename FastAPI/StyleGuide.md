@@ -29,7 +29,7 @@ Let's create a vega ( call it whatever you like ) shell function.
 vega() {
   if [[ "$1" == "init" && "$2" == "fastapi" ]]; then
     echo "📥 Downloading scaffold script..."
-    curl -sSL https://raw.githubusercontent.com/your-username/vega-scripts/main/init_fastapi.sh | bash
+    curl -sSL https://github.com/ayoka-catalog/style-guide/blob/main/FastAPI/setup.sh | bash
   else
     echo "❌ Usage: vega init fastapi"
   fi
